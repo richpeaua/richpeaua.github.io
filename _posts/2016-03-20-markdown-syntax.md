@@ -12,7 +12,7 @@ tag:
   - test
   - jekyll
 comments: true
-published: false
+published: true
 ---
 
 ## HTML Elements
