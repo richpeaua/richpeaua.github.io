@@ -14,7 +14,6 @@ layout: compress
     <!-- Header -->
     <header class="header flex" role="banner">
         <div class="container animated fadeIn">
-          <canvas></canvas>
             <div class="row">
                     <a href="{{ site.url }}">
                         <img src="{{ site.logo }}" class="img-circle zoombtn animated rotateIn">
@@ -47,8 +46,5 @@ layout: compress
         </div>
     </header>
     {% include scripts.html %}
-    <script type="text/javascript" charset="utf-8">
-        $(function(){var canvas=document.querySelector('canvas'),ctx=canvas.getContext('2d'),color='#eeeeee';canvas.width=window.Width;canvas.height=window.innerHeight;canvas.style.display='block';ctx.fillStyle=color;ctx.lineWidth=.1;ctx.strokeStyle=color;var dots={nb:500,distance:80,d_radius:150,array:[]};function Dot() {this.x=Math.random()*canvas.width;this.y=Math.random()*canvas.height;this.vx=-.5+Math.random();this.vy=-.5+Math.random();this.radius=Math.random();}Dot.prototype={create:function(){ctx.beginPath();ctx.arc(this.x,this.y,this.radius,0,Math.PI*2,false);ctx.fill();}};function makeDots(){for(i=0;i<dots.nb;i++){dots.array.push(new Dot());}}function moveDots(){for(i=0;i<dots.nb;i++){var dot=dots.array[i];if(dot.y<0||dot.y>canvas.height){dot.vx=dot.vx;dot.vy=-dot.vy;}else if(dot.x<0||dot.x>canvas.width){dot.vx=-dot.vx;dot.vy=dot.vy;}dot.x+=dot.vx;dot.y+=dot.vy;}}function animateDots(){ctx.clearRect(0, 0, canvas.width, canvas.height);for(i=0;i<dots.nb;i++){dot = dots.array[i];dot.create();}moveDots();}makeDots();setInterval(animateDots, 1000 / 30);}); 
-    </script>
 </body>
 </html>
