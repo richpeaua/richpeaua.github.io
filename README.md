@@ -1,8 +1,28 @@
-# hugo-toha.github.io
+![image](https://user-images.githubusercontent.com/5889006/190859441-141b5f81-8483-40d2-bd96-ebf85616a46d.png)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b1b93b02-f278-440b-ae1b-304e9f4c4ab5/deploy-status)](https://app.netlify.com/sites/toha/deploys) [![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fhugo-toha%2Fhugo-toha.github.io%2Fbadge%3Fref%3Dmain&style=flat)](https://actions-badge.atrox.dev/hugo-toha/hugo-toha.github.io/goto?ref=main) ![Repository Size](https://img.shields.io/github/repo-size/hugo-toha/hugo-toha.github.io) ![Contributor](https://img.shields.io/github/contributors/hugo-toha/hugo-toha.github.io) ![Last Commit](https://img.shields.io/github/last-commit/hugo-toha/hugo-toha.github.io) ![License](https://img.shields.io/github/license/hugo-toha/hugo-toha.github.io) ![Open Issues](https://img.shields.io/github/issues/hugo-toha/hugo-toha.github.io?color=important) ![Open Pull Requests](https://img.shields.io/github/issues-pr/hugo-toha/hugo-toha.github.io?color=yellowgreen) ![Security Headers](https://img.shields.io/security-headers?url=https%3A%2F%2Fhugo-toha.github.io%2F) [![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/b7cb60ab/hugo-toha.github.io)
+# Hugo Theme Stack
 
-An example hugo static site with Toha theme.
+<img align="right" width="150" alt="logo" src="https://user-images.githubusercontent.com/5889006/190859553-5b229b4f-c476-4cbd-928f-890f5265ca4c.png">
 
-Attributions:
-- <a href='https://www.freepik.com/vectors/business'>Business vector created by studiogstock - www.freepik.com</a>
+Card-style Hugo theme designed for bloggers.
+
+## Quickstart
+
+Use this template: [CaiJimmy/hugo-theme-stack-starter](https://github.com/CaiJimmy/hugo-theme-stack-starter)
+
+## Demo
+
+* Starter template demo: [demo.stack.jimmycai.com](https://demo.stack.jimmycai.com)
+* Dev build: [dev.stack.jimmycai.com](https://dev.stack.jimmycai.com)
+
+## Documentation
+
+Visit [stack.jimmycai.com](https://stack.jimmycai.com)
+
+## Copyright
+
+**Licensed under the GNU General Public License v3.0**
+
+Please do not remove the "*Theme Stack designed by Jimmy*" text and link.
+
+If you want to port this theme to another blogging platform, please let me know🙏.
