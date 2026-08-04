@@ -1,12 +1,16 @@
 // -----------------------------------------------------------------------------
 // Blog content sources.
 //
-// This is the single source of truth for which knowledge-base write-ups get
-// published as blog posts, and the blog-specific metadata for each. To publish
-// or update a post, edit this file and run `npm run sync`.
+// Single source of truth for which knowledge-base write-ups publish as blog
+// posts, plus the blog-specific metadata for each. Edit this and run
+// `npm run sync`.
+//
+// The knowledge-base is a fact -> content -> publish system; this manifest
+// pulls from its `writeups/` (content) layer. See the KB's pipeline/registry.mjs
+// for the full lineage back to sources.
 //
 // Each entry:
-//   source       path to the markdown file, relative to KB_PATH
+//   source       path to the write-up, relative to KB_PATH
 //   slug         URL slug -> /blog/<slug>  (also the cross-link target)
 //   title        post title (H1 in the source is stripped; this replaces it)
 //   description  one-line summary for cards, meta tags, and RSS
@@ -14,12 +18,8 @@
 //   tags         string[]
 //   featured     surface on the homepage (optional, default false)
 //   hero         image path relative to KB_PATH, copied into /public (optional)
-//   replace      [[from, to], ...] literal replacements applied to the raw
-//                source before transforms. Use for KB-only lines (cross-repo
-//                "see also" footers, source notes) that don't belong on the blog.
-//                A `from` that is not found is reported as an error by
-//                `npm run sync:check`. Alternatively wrap KB-only spans in the
-//                source with <!-- blog:skip --> ... <!-- /blog:skip -->.
+//   replace      [[from, to], ...] literal pre-transform replacements (optional).
+//                Prefer <!-- blog:skip --> spans in the source over rules here.
 // -----------------------------------------------------------------------------
 
 import os from 'node:os';
@@ -29,9 +29,11 @@ import path from 'node:path';
 export const KB_PATH =
   process.env.KB_PATH || path.join(os.homedir(), 'Dev/ai/knowledge-base');
 
+const PE = 'writeups/platform-engineering';
+
 export const posts = [
   {
-    source: 'platform-eng/platform-engineering.md',
+    source: `${PE}/platform-engineering.md`,
     slug: 'platform-engineering',
     title: 'From Ticket Queue to Federated Product',
     description:
@@ -39,15 +41,9 @@ export const posts = [
     pubDate: '2026-07-20',
     tags: ['platform-engineering', 'kubernetes', 'developer-experience'],
     featured: true,
-    replace: [
-      [
-        '*See [`kratix.md`](./kratix.md) for how one specific tool implements these ideas, [`../k8s/`](../k8s/) for the control-plane patterns this doc builds on, and [`linkedin-posts.md`](./linkedin-posts.md) for short-form versions of these arguments.*',
-        '*See [Kratix: Platform APIs as Kubernetes-Native Promises](/blog/kratix) for how one specific tool implements these ideas, and [Building a Platform, Layer by Layer](/blog/building-a-platform) for a hands-on, tool-by-tool build guide.*',
-      ],
-    ],
   },
   {
-    source: 'platform-eng/building-a-platform.md',
+    source: `${PE}/building-a-platform.md`,
     slug: 'building-a-platform',
     title: 'Building a Platform, Layer by Layer: The PAVED Road',
     description:
@@ -55,25 +51,10 @@ export const posts = [
     pubDate: '2026-07-27',
     tags: ['platform-engineering', 'kubernetes', 'paved', 'internal-developer-platform'],
     featured: true,
-    hero: 'platform-eng/paved-stack.svg',
-    replace: [
-      [
-        '*Related: [`platform-engineering.md`](./platform-engineering.md) (the operating model and the control-plane patterns), [`kratix.md`](./kratix.md) (one tool that implements P, V, and much of E in a single object), and [`../k8s/`](../k8s/) (the substrate mechanisms).*',
-        '*Related: [From Ticket Queue to Federated Product](/blog/platform-engineering) (the operating model and the control-plane patterns) and [Kratix: Platform APIs as Kubernetes-Native Promises](/blog/kratix) (one tool that implements P, V, and much of E in a single object).*',
-      ],
-      // KB-only cross-references into the Kubernetes internals notes.
-      [
-        ' and mechanism-by-mechanism in [`../k8s/`](../k8s/).',
-        '.',
-      ],
-      [
-        ' ([`../k8s/`](../k8s/))',
-        '',
-      ],
-    ],
+    hero: `${PE}/assets/paved-stack.svg`,
   },
   {
-    source: 'platform-eng/kratix.md',
+    source: `${PE}/kratix.md`,
     slug: 'kratix',
     title: 'Kratix: Platform APIs as Kubernetes-Native Promises',
     description:
@@ -81,16 +62,38 @@ export const posts = [
     pubDate: '2026-08-01',
     tags: ['kratix', 'kubernetes', 'platform-engineering'],
     featured: false,
-    replace: [
-      // Source-provenance note that only makes sense inside the knowledge base.
-      [
-        '\n> The source material for this write-up is the raw Q&A in [`kratix-raw-qa.md`](./kratix-raw-qa.md).\n',
-        '',
-      ],
-      [
-        'for the tool-independent treatment and the `k8s/` KB for mechanisms.',
-        "for the tool-independent treatment, and Kubernetes' own internals for the mechanisms.",
-      ],
-    ],
+  },
+  {
+    source: `${PE}/kubernetes-is-a-control-plane.md`,
+    slug: 'kubernetes-is-a-control-plane',
+    title: 'Kubernetes Is Not a Container Orchestrator',
+    description:
+      'Strip Kubernetes down and you get a declarative API, a store, and controllers that reconcile drift. Containers are the reference architecture, not the definition - and that reframing changes what you hand it.',
+    pubDate: '2026-08-05',
+    tags: ['kubernetes', 'platform-engineering', 'control-plane'],
+    featured: true,
+  },
+  {
+    source: `${PE}/engine-and-platform.md`,
+    slug: 'engine-and-platform',
+    title: 'The Engine and the Platform',
+    description:
+      'What building a reusable agentic workflow engine taught me about platform APIs: extract the engine, point the dependencies inward, invert control, hide the imperative core behind a declarative surface.',
+    pubDate: '2026-08-06',
+    tags: ['platform-engineering', 'architecture', 'ai'],
+    featured: false,
+  },
+  {
+    source: 'writeups/personal/git-gud-or-get-rekt.md',
+    slug: 'git-gud-or-get-rekt',
+    title: 'Git Gud Or Get Rekt',
+    description:
+      'A shift toward mastery: failing a stack of FAANG interviews, and what changed when I stopped chasing the offer and started closing the gaps.',
+    pubDate: '2024-09-06',
+    tags: ['career', 'personal', 'software-engineering'],
+    featured: false,
+    // Original post has unfilled placeholder tokens (<INSERT_FAANG_COMPANY>, etc.).
+    // Kept as draft (excluded from production build) until they're filled in.
+    draft: true,
   },
 ];

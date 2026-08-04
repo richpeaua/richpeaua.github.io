@@ -106,6 +106,7 @@ function frontmatter(p) {
   if (p.updatedDate) lines.push(`updatedDate: ${p.updatedDate}`);
   lines.push(`tags: [${p.tags.map((t) => JSON.stringify(t)).join(', ')}]`);
   lines.push(`featured: ${p.featured ? 'true' : 'false'}`);
+  if (p.draft) lines.push('draft: true');
   if (p.hero) lines.push(`heroImage: ${JSON.stringify('/' + path.basename(p.hero))}`);
   lines.push('---');
   return lines.join('\n');
