@@ -1,0 +1,59 @@
+name: Sync blog content from knowledge-base
+
+# Manual, or triggered by the knowledge-base repo via repository_dispatch.
+# This does NOT run on push to this repo; it only pulls write-ups from the KB.
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types: [kb-updated]
+
+# Requires:
+#   - repo variable  KB_REPO   e.g. "richpeaua/knowledge-base"
+#   - repo secret     KB_TOKEN  a PAT (or fine-grained token) with read access
+#                               to KB_REPO (only needed if the KB repo is private)
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout site
+        uses: actions/checkout@v4
+
+      - name: Checkout knowledge-base
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ vars.KB_REPO }}
+          token: ${{ secrets.KB_TOKEN }}
+          path: _kb
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Sync posts from the KB
+        env:
+          KB_PATH: ${{ github.workspace }}/_kb
+        run: npm run sync
+
+      - name: Open a PR if content changed
+        uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: "content: sync blog posts from knowledge-base"
+          title: "Sync blog posts from knowledge-base"
+          body: |
+            Automated content sync via `npm run sync`.
+
+            Review the regenerated posts under `src/content/blog/`, then merge to
+            publish. Generated files carry an `@generated` marker; edit the source
+            write-ups in the knowledge-base, not these files.
+          branch: content/sync-from-kb
+          delete-branch: true
+          add-paths: |
+            src/content/blog/**
+            public/**

@@ -7,6 +7,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "sync": "node scripts/sync-content.mjs",
+    "sync:check": "node scripts/sync-content.mjs --check",
     "astro": "astro"
   },
   "dependencies": {
