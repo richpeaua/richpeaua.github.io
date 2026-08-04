@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="627" viewBox="0 0 1200 627" font-family="Helvetica, Arial, sans-serif">
+<rect width="1200" height="627" fill="#F4EFE6"/>
+<text x="40" y="52" font-size="30" font-weight="700" fill="#1D3143">The PAVED road</text>
+<text x="272" y="52" font-size="16" fill="#5B7186">a platform, built layer by layer</text>
+<text x="40" y="76" font-size="14" fill="#5B7186">Five layers of a self-service platform, in PAVED order.</text>
+<path d="M54,92.0 H1146 a14,14 0 0 1 14,14 V192.6  H40  V106.0 a14,14 0 0 1 14,-14 Z" fill="#35576F"/>
+<rect x="66" y="115.3" width="54" height="54" rx="13" fill="#E8A44C"/>
+<text x="93" y="143.3" font-size="30" font-weight="800" fill="#1D3143" text-anchor="middle" dominant-baseline="central">P</text>
+<text x="138" y="138.3" font-size="17" font-weight="700" fill="#FFFFFF">Predictable contracts</text>
+<text x="138" y="157.3" font-size="12.5" fill="#B9C6D2">what can be asked for</text>
+<rect x="416.2" y="111.3" width="50" height="50" rx="11" fill="#F8F5EE" stroke="#00000022" stroke-width="1"/>
+<polygon points="441.2,121.3 453.0,126.9 455.9,139.6 447.8,149.8 434.7,149.8 426.6,139.6 429.5,126.9" fill="#326CE5"/><line x1="441.25" y1="136.3" x2="441.2" y2="127.3" stroke="#FFFFFF" stroke-width="1.4"/><line x1="441.25" y1="136.3" x2="448.3" y2="130.7" stroke="#FFFFFF" stroke-width="1.4"/><line x1="441.25" y1="136.3" x2="450.0" y2="138.3" stroke="#FFFFFF" stroke-width="1.4"/><line x1="441.25" y1="136.3" x2="445.2" y2="144.4" stroke="#FFFFFF" stroke-width="1.4"/><line x1="441.25" y1="136.3" x2="437.3" y2="144.4" stroke="#FFFFFF" stroke-width="1.4"/><line x1="441.25" y1="136.3" x2="432.5" y2="138.3" stroke="#FFFFFF" stroke-width="1.4"/><line x1="441.25" y1="136.3" x2="434.2" y2="130.7" stroke="#FFFFFF" stroke-width="1.4"/><circle cx="441.25" cy="136.3" r="3.4" fill="none" stroke="#FFFFFF" stroke-width="1.6"/>
+<text x="441.2" y="177.3" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">Kubernetes</text>
+<rect x="618.8" y="111.3" width="50" height="50" rx="11" fill="#F8F5EE" stroke="#00000022" stroke-width="1"/>
+<text x="643.75" y="136.3" font-size="24" font-weight="800" fill="#E5734F" text-anchor="middle" dominant-baseline="central">X</text>
+<text x="643.8" y="177.3" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">Crossplane</text>
+<rect x="821.2" y="111.3" width="50" height="50" rx="11" fill="#F8F5EE" stroke="#00000022" stroke-width="1"/>
+<text x="846.25" y="136.3" font-size="24" font-weight="800" fill="#6C4BB6" text-anchor="middle" dominant-baseline="central">K</text>
+<text x="846.2" y="177.3" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">Kratix</text>
+<rect x="1023.8" y="111.3" width="50" height="50" rx="11" fill="#F8F5EE" stroke="#00000022" stroke-width="1"/>
+<polygon points="1048.8,121.3 1061.7,128.8 1061.7,143.8 1048.8,151.3 1035.8,143.8 1035.8,128.8" fill="none" stroke="#6BA539" stroke-width="3"/><circle cx="1048.75" cy="136.3" r="4" fill="#6BA539"/>
+<text x="1048.8" y="177.3" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">OpenAPI</text>
+<path d="M40,192.6 H1160  V293.2  H40  V192.6  Z" fill="#2F4E64"/>
+<line x1="40" y1="192.6" x2="1160" y2="192.6" stroke="#0F2130" stroke-width="1" opacity="0.5"/>
+<rect x="66" y="215.9" width="54" height="54" rx="13" fill="#E8A44C"/>
+<text x="93" y="243.9" font-size="30" font-weight="800" fill="#1D3143" text-anchor="middle" dominant-baseline="central">A</text>
+<text x="138" y="238.9" font-size="17" font-weight="700" fill="#FFFFFF">Accessible interfaces</text>
+<text x="138" y="257.9" font-size="12.5" fill="#B9C6D2">how you make the ask</text>
+<rect x="416.2" y="211.9" width="50" height="50" rx="11" fill="#F8F5EE" stroke="#00000022" stroke-width="1"/>
+<rect x="427.25" y="225.89999999999998" width="28" height="24" rx="7" fill="#36BAA2"/><circle cx="435.25" cy="236.89999999999998" r="3" fill="#FFFFFF"/><circle cx="447.25" cy="236.89999999999998" r="3" fill="#FFFFFF"/><line x1="441.25" y1="225.89999999999998" x2="441.25" y2="219.89999999999998" stroke="#36BAA2" stroke-width="2"/><circle cx="441.25" cy="218.89999999999998" r="2.2" fill="#36BAA2"/>
+<text x="441.2" y="277.9" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">Backstage</text>
+<rect x="618.8" y="211.9" width="50" height="50" rx="11" fill="#F8F5EE" stroke="#00000022" stroke-width="1"/>
+<text x="643.75" y="236.89999999999998" font-size="24" font-weight="800" fill="#6C5CE7" text-anchor="middle" dominant-baseline="central">P</text>
+<text x="643.8" y="277.9" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">Port</text>
+<rect x="821.2" y="211.9" width="50" height="50" rx="11" fill="#F8F5EE" stroke="#00000022" stroke-width="1"/>
+<text x="846.25" y="236.89999999999998" font-size="24" font-weight="800" fill="#0FA3B1" text-anchor="middle" dominant-baseline="central">S</text>
+<text x="846.2" y="277.9" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">Score</text>
+<rect x="1023.8" y="211.9" width="50" height="50" rx="11" fill="#F8F5EE" stroke="#00000022" stroke-width="1"/>
+<rect x="1032.8" y="224.9" width="32" height="32" rx="11" fill="#1D3143"/><polyline points="1039.75,232.89999999999998 1045.75,237.89999999999998 1039.75,242.89999999999998" fill="none" stroke="#7FE0C6" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><line x1="1047.75" y1="242.89999999999998" x2="1057.75" y2="242.89999999999998" stroke="#7FE0C6" stroke-width="2.2" stroke-linecap="round"/>
+<text x="1048.8" y="277.9" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">kubectl</text>
+<path d="M40,293.2 H1160  V393.8  H40  V293.2  Z" fill="#294459"/>
+<line x1="40" y1="293.2" x2="1160" y2="293.2" stroke="#0F2130" stroke-width="1" opacity="0.5"/>
+<rect x="66" y="316.5" width="54" height="54" rx="13" fill="#E8A44C"/>
+<text x="93" y="344.5" font-size="30" font-weight="800" fill="#1D3143" text-anchor="middle" dominant-baseline="central">V</text>
+<text x="138" y="339.5" font-size="17" font-weight="700" fill="#FFFFFF">Verified deployment</text>
+<text x="138" y="358.5" font-size="12.5" fill="#B9C6D2">how the ask becomes real</text>
+<rect x="396.0" y="312.5" width="50" height="50" rx="11" fill="#F8F5EE" stroke="#00000022" stroke-width="1"/>
+<circle cx="421.0" cy="333.5" r="11" fill="#EF7B4D"/><circle cx="417.0" cy="332.5" r="2" fill="#FFFFFF"/><circle cx="425.0" cy="332.5" r="2" fill="#FFFFFF"/><path d="M413.0,341.5 q-2.4,9 -4.8,12" fill="none" stroke="#EF7B4D" stroke-width="2.2" stroke-linecap="round"/><path d="M418.0,341.5 q-0.8999999999999999,9 -1.7999999999999998,12" fill="none" stroke="#EF7B4D" stroke-width="2.2" stroke-linecap="round"/><path d="M424.0,341.5 q0.8999999999999999,9 1.7999999999999998,12" fill="none" stroke="#EF7B4D" stroke-width="2.2" stroke-linecap="round"/><path d="M429.0,341.5 q2.4,9 4.8,12" fill="none" stroke="#EF7B4D" stroke-width="2.2" stroke-linecap="round"/>
+<text x="421.0" y="378.5" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">Argo CD</text>
+<rect x="558.0" y="312.5" width="50" height="50" rx="11" fill="#F8F5EE" stroke="#00000022" stroke-width="1"/>
+<path d="M583.0,323.5 a14,14 0 1,1 -12,7" fill="none" stroke="#5C4EE5" stroke-width="3" stroke-linecap="round"/><polygon points="582.0,319.5 589.0,323.5 582.0,327.5" fill="#5C4EE5"/><circle cx="583.0" cy="337.5" r="3.2" fill="#5C4EE5"/>
+<text x="583.0" y="378.5" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">Flux</text>
+<rect x="720.0" y="312.5" width="50" height="50" rx="11" fill="#F8F5EE" stroke="#00000022" stroke-width="1"/>
+<path d="M732.0,326.5 l11,6 v13 l-11,-6 z" fill="#7B42BC"/><path d="M744.0,333.5 l11,6 v13 l-11,-6 z" fill="#7B42BC"/><path d="M732.0,340.5 l11,6 v13 l-11,-6 z" fill="#7B42BC"/>
+<text x="745.0" y="378.5" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">Terraform</text>
+<rect x="882.0" y="312.5" width="50" height="50" rx="11" fill="#F8F5EE" stroke="#00000022" stroke-width="1"/>
+<circle cx="907.0" cy="337.5" r="14" fill="none" stroke="#0F1689" stroke-width="3"/><circle cx="907.0" cy="337.5" r="4.5" fill="#0F1689"/><line x1="911.0" y1="337.5" x2="924.0" y2="337.5" stroke="#0F1689" stroke-width="2.4"/><circle cx="923.0" cy="337.5" r="2.4" fill="#0F1689"/><line x1="909.0" y1="341.0" x2="915.5" y2="352.2" stroke="#0F1689" stroke-width="2.4"/><circle cx="915.0" cy="351.4" r="2.4" fill="#0F1689"/><line x1="905.0" y1="341.0" x2="898.5" y2="352.2" stroke="#0F1689" stroke-width="2.4"/><circle cx="899.0" cy="351.4" r="2.4" fill="#0F1689"/><line x1="903.0" y1="337.5" x2="890.0" y2="337.5" stroke="#0F1689" stroke-width="2.4"/><circle cx="891.0" cy="337.5" r="2.4" fill="#0F1689"/><line x1="905.0" y1="334.0" x2="898.5" y2="322.8" stroke="#0F1689" stroke-width="2.4"/><circle cx="899.0" cy="323.6" r="2.4" fill="#0F1689"/><line x1="909.0" y1="334.0" x2="915.5" y2="322.8" stroke="#0F1689" stroke-width="2.4"/><circle cx="915.0" cy="323.6" r="2.4" fill="#0F1689"/>
+<text x="907.0" y="378.5" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">Helm</text>
+<rect x="1044.0" y="312.5" width="50" height="50" rx="11" fill="#F8F5EE" stroke="#00000022" stroke-width="1"/>
+<text x="1069.0" y="337.5" font-size="17" font-weight="800" fill="#8A3391" text-anchor="middle" dominant-baseline="central">Pu</text>
+<text x="1069.0" y="378.5" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">Pulumi</text>
+<path d="M40,393.8 H1160  V494.4  H40  V393.8  Z" fill="#233A4D"/>
+<line x1="40" y1="393.8" x2="1160" y2="393.8" stroke="#0F2130" stroke-width="1" opacity="0.5"/>
+<rect x="66" y="417.1" width="54" height="54" rx="13" fill="#E8A44C"/>
+<text x="93" y="445.1" font-size="30" font-weight="800" fill="#1D3143" text-anchor="middle" dominant-baseline="central">E</text>
+<text x="138" y="440.1" font-size="17" font-weight="700" fill="#FFFFFF">Enabling guardrails</text>
+<text x="138" y="459.1" font-size="12.5" fill="#B9C6D2">what keeps it safe</text>
+<rect x="416.2" y="413.1" width="50" height="50" rx="11" fill="#F8F5EE" stroke="#00000022" stroke-width="1"/>
+<text x="441.25" y="438.09999999999997" font-size="24" font-weight="800" fill="#2AA5A5" text-anchor="middle" dominant-baseline="central">K</text>
+<text x="441.2" y="479.1" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">Kyverno</text>
+<rect x="618.8" y="413.1" width="50" height="50" rx="11" fill="#F8F5EE" stroke="#00000022" stroke-width="1"/>
+<text x="643.75" y="438.09999999999997" font-size="13" font-weight="800" fill="#7D5BA6" text-anchor="middle" dominant-baseline="central">OPA</text>
+<text x="643.8" y="479.1" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">OPA / Gatekeeper</text>
+<rect x="821.2" y="413.1" width="50" height="50" rx="11" fill="#FFD814" stroke="#00000022" stroke-width="1"/>
+<polygon points="846.2,423.1 859.2,430.6 859.2,445.6 846.2,453.1 833.3,445.6 833.3,430.6" fill="#1D3143"/><text x="846.25" y="439.09999999999997" font-size="17" font-weight="800" fill="#FFD814" text-anchor="middle" dominant-baseline="central">V</text>
+<text x="846.2" y="479.1" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">Vault</text>
+<rect x="1023.8" y="413.1" width="50" height="50" rx="11" fill="#F8F5EE" stroke="#00000022" stroke-width="1"/>
+<text x="1048.75" y="438.09999999999997" font-size="24" font-weight="800" fill="#3C8DBC" text-anchor="middle" dominant-baseline="central">$</text>
+<text x="1048.8" y="479.1" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">OpenCost</text>
+<path d="M40,494.4 H1160  V581.0 a14,14 0 0 1 -14,14 H54 a14,14 0 0 1 -14,-14 V494.4  Z" fill="#1D3143"/>
+<line x1="40" y1="494.4" x2="1160" y2="494.4" stroke="#0F2130" stroke-width="1" opacity="0.5"/>
+<rect x="66" y="517.7" width="54" height="54" rx="13" fill="#E8A44C"/>
+<text x="93" y="545.7" font-size="30" font-weight="800" fill="#1D3143" text-anchor="middle" dominant-baseline="central">D</text>
+<text x="138" y="540.7" font-size="17" font-weight="700" fill="#FFFFFF">Discoverable catalog</text>
+<text x="138" y="559.7" font-size="12.5" fill="#B9C6D2">how it's found and owned</text>
+<rect x="450.0" y="513.7" width="50" height="50" rx="11" fill="#F8F5EE" stroke="#00000022" stroke-width="1"/>
+<rect x="461.0" y="527.6999999999999" width="28" height="24" rx="7" fill="#36BAA2"/><circle cx="469.0" cy="538.6999999999999" r="3" fill="#FFFFFF"/><circle cx="481.0" cy="538.6999999999999" r="3" fill="#FFFFFF"/><line x1="475.0" y1="527.6999999999999" x2="475.0" y2="521.6999999999999" stroke="#36BAA2" stroke-width="2"/><circle cx="475.0" cy="520.6999999999999" r="2.2" fill="#36BAA2"/>
+<text x="475.0" y="579.7" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">Backstage</text>
+<rect x="720.0" y="513.7" width="50" height="50" rx="11" fill="#F8F5EE" stroke="#00000022" stroke-width="1"/>
+<text x="745.0" y="538.6999999999999" font-size="24" font-weight="800" fill="#FF5C39" text-anchor="middle" dominant-baseline="central">C</text>
+<text x="745.0" y="579.7" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">Cortex</text>
+<rect x="990.0" y="513.7" width="50" height="50" rx="11" fill="#F8F5EE" stroke="#00000022" stroke-width="1"/>
+<text x="1015.0" y="538.6999999999999" font-size="24" font-weight="800" fill="#1FB58F" text-anchor="middle" dominant-baseline="central">O</text>
+<text x="1015.0" y="579.7" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">OpsLevel</text>
+</svg>

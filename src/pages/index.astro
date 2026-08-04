@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostCard from '../components/PostCard.astro';
+import Icon from '../components/Icon.astro';
+import { SITE, SOCIALS } from '../consts';
+import { getPosts, minutesFor, getAllTags } from '../utils';
+
+const posts = await getPosts();
+const featured = posts.filter((p) => p.data.featured);
+const recent = (featured.length ? featured : posts).slice(0, 3);
+const tags = [...(await getAllTags()).keys()].slice(0, 8);
+---
+<BaseLayout>
+  <div class="container">
+    <section class="hero">
+      <img class="avatar" src={SITE.avatar} alt="Rich Peaua" width="132" height="132" />
+      <div>
+        <p class="eyebrow">Platform &amp; Reliability Engineering</p>
+        <h1>Hi, I'm Rich.</h1>
+        <p class="tagline">{SITE.tagline}</p>
+        <p class="bio">
+          I build internal developer platforms and the reliable, self-service
+          paths that let product teams ship without filing tickets. I write about
+          platform engineering, developer experience, and the Kubernetes control-plane
+          patterns underneath it all.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/blog">Read the blog <Icon name="arrow" size={16} /></a>
+          {
+            SOCIALS.filter((s) => s.icon !== 'rss').map((s) => (
+              <a class="btn" href={s.href} rel={s.href.startsWith('http') ? 'me noopener' : undefined}>
+                <Icon name={s.icon} size={16} /> {s.name}
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>{featured.length ? 'Featured writing' : 'Latest writing'}</h2>
+        <a class="more" href="/blog">All posts <Icon name="arrow" size={14} /></a>
+      </div>
+      <div class="card-grid">
+        {
+          recent.map((p) => (
+            <PostCard
+              href={`/blog/${p.id}`}
+              title={p.data.title}
+              description={p.data.description}
+              pubDate={p.data.pubDate}
+              minutes={minutesFor(p)}
+              tags={p.data.tags}
+            />
+          ))
+        }
+      </div>
+    </section>
+
+    {
+      tags.length > 0 && (
+        <section class="section">
+          <div class="section-head">
+            <h2>Topics</h2>
+          </div>
+          <div class="tag-row">
+            {tags.map((t) => (
+              <a class="tag" href={`/tags/${t}`}>
+                {t}
+              </a>
+            ))}
+          </div>
+        </section>
+      )
+    }
+  </div>
+</BaseLayout>

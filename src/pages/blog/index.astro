@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FormattedDate from '../../components/FormattedDate.astro';
+import Icon from '../../components/Icon.astro';
+import { getPosts, minutesFor } from '../../utils';
+
+const posts = await getPosts();
+---
+<BaseLayout title="Blog" description="Write-ups on platform engineering, developer platforms, and Kubernetes patterns.">
+  <div class="container">
+    <header class="article-header">
+      <p class="eyebrow">Writing</p>
+      <h1>Blog</h1>
+      <p class="lede">
+        Long-form notes on platform engineering, developer experience, and the
+        control-plane patterns that make self-service platforms work.
+      </p>
+    </header>
+
+    <ul class="post-list">
+      {
+        posts.map((p) => (
+          <li class="post-row">
+            <div class="post-meta">
+              <FormattedDate date={p.data.pubDate} />
+              <span aria-hidden="true">·</span>
+              <span><Icon name="clock" size={13} /> {minutesFor(p)} min</span>
+            </div>
+            <h3><a href={`/blog/${p.id}`}>{p.data.title}</a></h3>
+            <p>{p.data.description}</p>
+            <div class="tag-row">
+              {p.data.tags.map((t) => (
+                <a class="tag" href={`/tags/${t}`}>{t}</a>
+              ))}
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</BaseLayout>

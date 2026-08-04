@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icon.astro';
+import { SITE, SOCIALS } from '../consts';
+
+const skills = [
+  'Kubernetes',
+  'Platform Engineering',
+  'Internal Developer Platforms',
+  'GitOps (Argo CD / Flux)',
+  'Terraform & Crossplane',
+  'CI/CD',
+  'Observability',
+  'DevSecOps',
+  'SRE',
+  'Go & Python',
+];
+---
+<BaseLayout title="About" description="About Rich Peaua — platform, reliability, and DevSecOps engineer.">
+  <div class="container">
+    <article class="prose" style="padding-top:2.5rem">
+      <p class="eyebrow">About</p>
+      <h1 class="mt-0" style="font-size:clamp(1.9rem,4vw,2.6rem)">About Rich</h1>
+
+      <p>
+        I'm a platform and reliability engineer. I spend my time turning the messy,
+        ticket-driven middle of an engineering org into paved roads: self-service
+        contracts that let product teams request what they need and get it, safely,
+        without waiting on a central team.
+      </p>
+      <p>
+        Most of my work lives where developer experience meets the control plane.
+        I care about the patterns that make platforms hold up at scale, level-triggered
+        reconciliation, one contract-bearing API surface, guardrails enforced at the
+        boundary, and about the organizational shift those patterns enable: from a
+        platform team that does the work to one that makes it cheap for every other team
+        to do their own.
+      </p>
+
+      <h2>What I work with</h2>
+      <div class="tag-row" style="margin:0.5rem 0 0.5rem">
+        {skills.map((s) => <span class="tag">{s}</span>)}
+      </div>
+
+      <h2>Elsewhere</h2>
+      <ul>
+        {
+          SOCIALS.map((s) => (
+            <li>
+              <a href={s.href} rel={s.href.startsWith('http') ? 'me noopener' : undefined}>
+                <Icon name={s.icon} size={15} /> {s.name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+
+      <p class="muted">
+        This site is built with <a href="https://astro.build">Astro</a> and deployed to
+        GitHub Pages. The source lives on
+        <a href="https://github.com/richpeaua/richpeaua.github.io">GitHub</a>.
+      </p>
+    </article>
+  </div>
+</BaseLayout>

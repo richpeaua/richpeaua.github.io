@@ -1,0 +1,94 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import Icon from '../components/Icon.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  pubDate: Date;
+  updatedDate?: Date;
+  minutes?: number;
+  tags?: string[];
+  heroImage?: string;
+}
+const { title, description, pubDate, updatedDate, minutes, tags = [], heroImage } =
+  Astro.props;
+---
+<BaseLayout title={title} description={description} article={true} image={heroImage}>
+  <div class="reading-bar" id="reading-bar"></div>
+  <article class="container">
+    <header class="article-header">
+      <a href="/blog" class="eyebrow" style="text-decoration:none">← All posts</a>
+      <h1>{title}</h1>
+      <p class="lede">{description}</p>
+      <div class="post-meta">
+        <FormattedDate date={pubDate} />
+        {minutes ? <span aria-hidden="true">·</span> : null}
+        {minutes ? <span><Icon name="clock" size={13} /> {minutes} min read</span> : null}
+        {updatedDate ? <span aria-hidden="true">·</span> : null}
+        {updatedDate ? <span>Updated <FormattedDate date={updatedDate} /></span> : null}
+      </div>
+      {
+        tags.length > 0 && (
+          <div class="tag-row" style="margin-top:.7rem">
+            {tags.map((t) => (
+              <a class="tag" href={`/tags/${t}`}>
+                {t}
+              </a>
+            ))}
+          </div>
+        )
+      }
+    </header>
+
+    <div class="prose">
+      {heroImage ? <img src={heroImage} alt="" loading="eager" /> : null}
+      <slot />
+    </div>
+  </article>
+
+  <!-- Reading progress bar -->
+  <script>
+    const bar = document.getElementById('reading-bar');
+    const onScroll = () => {
+      const h = document.documentElement;
+      const max = h.scrollHeight - h.clientHeight;
+      const pct = max > 0 ? (h.scrollTop / max) * 100 : 0;
+      if (bar) bar.style.width = pct + '%';
+    };
+    document.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  </script>
+
+  <!-- Mermaid: render any <pre class="mermaid"> blocks, theme-aware -->
+  <script>
+    import mermaid from 'mermaid';
+
+    const hasDiagram = document.querySelector('pre.mermaid');
+    if (hasDiagram) {
+      const graphs = new Map<Element, string>();
+      document.querySelectorAll('pre.mermaid').forEach((el) => {
+        graphs.set(el, el.textContent || '');
+      });
+
+      const render = () => {
+        const dark = document.documentElement.dataset.theme === 'dark';
+        mermaid.initialize({
+          startOnLoad: false,
+          theme: dark ? 'dark' : 'neutral',
+          securityLevel: 'strict',
+          fontFamily: 'inherit',
+        });
+        graphs.forEach((src, el) => {
+          el.removeAttribute('data-processed');
+          el.textContent = src;
+        });
+        mermaid.run({ querySelector: 'pre.mermaid' });
+      };
+
+      render();
+      window.addEventListener('themechange', render);
+    }
+  </script>
+</BaseLayout>

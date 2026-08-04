@@ -1,0 +1,43 @@
+---
+import { SITE, NAV } from '../consts';
+import Icon from './Icon.astro';
+const path = Astro.url.pathname;
+const isActive = (href: string) =>
+  href === '/' ? path === '/' : path.startsWith(href);
+---
+<header class="site-header">
+  <div class="container bar">
+    <a href="/" class="brand"><span class="dot"></span>{SITE.title}</a>
+    <nav class="nav" aria-label="Primary">
+      {
+        NAV.map((item) => (
+          <a href={item.href} aria-current={isActive(item.href) ? 'page' : undefined}>
+            {item.name}
+          </a>
+        ))
+      }
+      <button
+        class="icon-btn theme-toggle"
+        id="theme-toggle"
+        type="button"
+        aria-label="Toggle color theme"
+        title="Toggle theme"
+      >
+        <Icon name="sun" class="sun" size={18} />
+        <Icon name="moon" class="moon" size={18} />
+      </button>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('theme-toggle');
+  btn?.addEventListener('click', () => {
+    const root = document.documentElement;
+    const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    root.dataset.theme = next;
+    localStorage.setItem('theme', next);
+    // let mermaid (if present) know the theme changed
+    window.dispatchEvent(new CustomEvent('themechange', { detail: next }));
+  });
+</script>

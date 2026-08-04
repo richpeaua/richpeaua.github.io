@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FormattedDate from '../../components/FormattedDate.astro';
+import Icon from '../../components/Icon.astro';
+import { getPosts, minutesFor, getAllTags } from '../../utils';
+
+export async function getStaticPaths() {
+  const tags = await getAllTags();
+  const posts = await getPosts();
+  return [...tags.keys()].map((tag) => ({
+    params: { tag },
+    props: { tag, posts: posts.filter((p) => p.data.tags.includes(tag)) },
+  }));
+}
+
+const { tag, posts } = Astro.props;
+---
+<BaseLayout title={`#${tag}`} description={`Posts tagged ${tag}.`}>
+  <div class="container">
+    <header class="article-header">
+      <p class="eyebrow">Tag</p>
+      <h1>#{tag}</h1>
+      <p class="lede">{posts.length} post{posts.length === 1 ? '' : 's'} tagged “{tag}”.</p>
+      <a href="/blog" class="tag">← All posts</a>
+    </header>
+
+    <ul class="post-list">
+      {
+        posts.map((p) => (
+          <li class="post-row">
+            <div class="post-meta">
+              <FormattedDate date={p.data.pubDate} />
+              <span aria-hidden="true">·</span>
+              <span><Icon name="clock" size={13} /> {minutesFor(p)} min</span>
+            </div>
+            <h3><a href={`/blog/${p.id}`}>{p.data.title}</a></h3>
+            <p>{p.data.description}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</BaseLayout>

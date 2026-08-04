@@ -1,0 +1,32 @@
+---
+import FormattedDate from './FormattedDate.astro';
+import Icon from './Icon.astro';
+
+interface Props {
+  href: string;
+  title: string;
+  description: string;
+  pubDate: Date;
+  minutes?: number;
+  tags?: string[];
+}
+const { href, title, description, pubDate, minutes, tags = [] } = Astro.props;
+---
+<a class="post-card" href={href}>
+  <div class="post-meta">
+    <FormattedDate date={pubDate} />
+    {minutes ? <span aria-hidden="true">·</span> : null}
+    {minutes ? <span><Icon name="clock" size={13} /> {minutes} min</span> : null}
+  </div>
+  <h3>{title}</h3>
+  <p>{description}</p>
+  {
+    tags.length > 0 && (
+      <div class="tag-row">
+        {tags.slice(0, 3).map((t) => (
+          <span class="tag">{t}</span>
+        ))}
+      </div>
+    )
+  }
+</a>
