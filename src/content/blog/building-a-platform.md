@@ -279,4 +279,4 @@ PAVED is five courses of one road: **P**redictable contracts as the base, **V**e
 
 ---
 
-*Related: [From Ticket Queue to Federated Product](/blog/platform-engineering) (the operating model and the control-plane patterns) and [Kratix: Platform APIs as Kubernetes-Native Promises](/blog/kratix) (one tool that implements P, V, and much of E in a single object).*
+*Related: [From Ticket Queue to Federated Product](/blog/platform-engineering) (the operating model and the control-plane patterns), [Kratix: Platform APIs as Kubernetes-Native Promises](/blog/kratix) (one tool that implements P, V, and much of E in a single object), and [A Platform From Scratch](/blog/platform-from-scratch) (a Python reference implementation of the same layers, no cluster required).*

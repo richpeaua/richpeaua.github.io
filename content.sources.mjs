@@ -54,6 +54,16 @@ export const posts = [
     hero: `${PE}/assets/paved-stack.svg`,
   },
   {
+    source: `${PE}/platform-from-scratch.md`,
+    slug: 'platform-from-scratch',
+    title: 'A Platform From Scratch',
+    description:
+      'I built a tiny internal platform in Python to prove the PAVED layers are not Kubernetes-shaped: contracts, reconcilers, guardrails, a CLI, a catalog. Then the one production tool I would use at each layer instead.',
+    pubDate: '2026-08-18',
+    tags: ['platform-engineering', 'paved', 'internal-developer-platform'],
+    featured: true,
+  },
+  {
     source: `${PE}/kratix.md`,
     slug: 'kratix',
     title: 'Kratix: Platform APIs as Kubernetes-Native Promises',
