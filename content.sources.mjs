@@ -96,16 +96,6 @@ export const posts = [
     featured: true,
   },
   {
-    source: `${PE}/engine-and-platform.md`,
-    slug: 'engine-and-platform',
-    title: 'The Engine and the Platform',
-    description:
-      'What building a reusable agentic workflow engine taught me about platform APIs: extract the engine, point the dependencies inward, invert control, hide the imperative core behind a declarative surface.',
-    pubDate: '2026-08-06',
-    tags: ['platform-engineering', 'architecture', 'ai'],
-    featured: false,
-  },
-  {
     source: 'writeups/personal/git-gud-or-get-rekt.md',
     slug: 'git-gud-or-get-rekt',
     title: 'Git Gud Or Get Rekt',

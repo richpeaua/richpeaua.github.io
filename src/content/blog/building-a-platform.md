@@ -279,4 +279,4 @@ PAVED is five courses of one road: **P**redictable contracts as the base, **V**e
 
 ---
 
-*Related: [From Ticket Queue to Federated Product](/blog/platform-engineering) (the operating model and the control-plane patterns), [Kratix: Platform APIs as Kubernetes-Native Promises](/blog/kratix) (one tool that implements P, V, and much of E in a single object), [A Platform From Scratch](/blog/platform-from-scratch) (the same layers in Python, no cluster), and [A Platform on AWS](/blog/platform-on-aws) (the same layers on DynamoDB, App Runner, Amplify, and IAM).*
+*Related: [From Ticket Queue to Federated Product](/blog/platform-engineering) (the operating model and the control-plane patterns), [Kratix: Platform APIs as Kubernetes-Native Promises](/blog/kratix) (one tool that implements P, V, and much of E in a single object), [A Platform From Scratch](/blog/platform-from-scratch) (a Python reference implementation of the same layers, no cluster required), and [A Platform on AWS](/blog/platform-on-aws) (the same layers on DynamoDB, App Runner, Amplify, and IAM).*
