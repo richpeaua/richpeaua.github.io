@@ -537,4 +537,4 @@ I already knew the tools. Building the dumb version is what made the tools make 
 
 ---
 
-*Related: [Building a Platform, Layer by Layer: The PAVED Road](/blog/building-a-platform) (PAVED, the layers this implements), [From Ticket Queue to Federated Product](/blog/platform-engineering) (why federation and a control plane), and [Kratix: Platform APIs as Kubernetes-Native Promises](/blog/kratix) (the production-shaped version of P, V, and much of E).*
+*Related: [Building a Platform, Layer by Layer: The PAVED Road](/blog/building-a-platform) (PAVED, the layers this implements), [A Platform on AWS](/blog/platform-on-aws) (the same layers on AWS managed services), [From Ticket Queue to Federated Product](/blog/platform-engineering) (why federation and a control plane), and [Kratix: Platform APIs as Kubernetes-Native Promises](/blog/kratix) (the production-shaped version of P, V, and much of E).*

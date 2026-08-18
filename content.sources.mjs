@@ -65,6 +65,17 @@ export const posts = [
     hero: `${PE}/assets/platform-from-scratch-hero.png`,
   },
   {
+    source: `${PE}/platform-on-aws.md`,
+    slug: 'platform-on-aws',
+    title: 'A Platform on AWS',
+    description:
+      'The same PAVED layers, paved with managed services: DynamoDB, IAM Identity Center, Step Functions, App Runner, Amplify, Secrets Manager. One contract, two compute paths, no cluster.',
+    pubDate: '2026-08-18',
+    tags: ['platform-engineering', 'paved', 'aws', 'internal-developer-platform'],
+    featured: true,
+    hero: `${PE}/assets/platform-on-aws-hero.png`,
+  },
+  {
     source: `${PE}/kratix.md`,
     slug: 'kratix',
     title: 'Kratix: Platform APIs as Kubernetes-Native Promises',
