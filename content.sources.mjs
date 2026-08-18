@@ -62,6 +62,7 @@ export const posts = [
     pubDate: '2026-08-18',
     tags: ['platform-engineering', 'paved', 'internal-developer-platform'],
     featured: true,
+    hero: `${PE}/assets/platform-from-scratch-hero.png`,
   },
   {
     source: `${PE}/kratix.md`,
